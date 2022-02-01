@@ -19,11 +19,7 @@
   padding-left: 70px;
   display: flex;
   align-items: center;
-  background: linear-gradient(
-    79.6deg,
-    #a62626 -49.87%,
-    rgba(9, 9, 9, 0) 118.85%
-  );
+  background: linear-gradient(86.62deg, #2F060F 58.48%, rgba(9, 9, 9, 0) 111.51%);
   background-color: #000;
   flex-grow: 1;
 }
