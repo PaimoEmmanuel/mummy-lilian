@@ -44,6 +44,7 @@ h6 {
   font-family: Ayer;
 }
 p,
+textarea,
 a {
   font-family: GalanoGrotesque;
 }
@@ -92,6 +93,14 @@ a {
   z-index: 9;
   animation: rotate 8s ease-in infinite;
 }
+@media screen and (max-width: 600px) {
+  .header-cel {
+    height: 70px;
+    width: 70px;
+    right: 30px;
+    bottom: 130px;
+  }
+}
 .header h1 {
   text-transform: uppercase;
   font-size: 400px;
@@ -100,6 +109,7 @@ a {
   font-weight: 400;
   position: relative;
   visibility: hidden;
+  z-index: 1;
 }
 .header h1 span {
   /* opacity: 1; */
@@ -108,6 +118,12 @@ a {
 }
 .header h1 span:first-child {
   /* transform: skewY(9deg); */
+}
+@media screen and (max-width: 1700px) {
+  .header h1 {
+    font-size: 340px;
+    line-height: 305.59px;
+  }
 }
 @media screen and (max-width: 1440px) {
   .header h1 {
@@ -121,10 +137,18 @@ a {
     line-height: 205.59px;
   }
 }
+@media screen and (max-width: 900px) {
+  .header h1 {
+    font-size: 160px;
+    line-height: 15.59px;
+    margin-bottom: 50px;
+  }
+}
 @media screen and (max-width: 600px) {
   .header h1 {
     font-size: 80px;
     line-height: 105.59px;
+    margin-bottom: 50px;
   }
 }
 .header p {
@@ -134,6 +158,7 @@ a {
   line-height: 60px;
   font-weight: 700;
   text-transform: uppercase;
+  z-index: 1;
 }
 @media screen and (max-width: 1440px) {
   .header p {
@@ -149,9 +174,10 @@ a {
 }
 @media screen and (max-width: 600px) {
   .header p {
-    font-size: 28px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 26px;
     text-align: center;
+    padding: 0 20px;
   }
 }
 .section {
@@ -159,42 +185,43 @@ a {
 }
 .grid {
   position: relative;
-  padding: 1000px 0 0;
+  padding: 850px 0 0;
+  overflow: hidden;
 }
 /* .grid img {
     width: 100%;
 } */
 @keyframes bounce-1 {
   0% {
-    transform: translate3d(40px, 40px, 40px);
+    transform: translate3d(0px, 20px, 40px);
   }
   50% {
-    transform: translate3d(50px, 30px, 0px) skewY(2deg);
+    transform: translate3d(00px, 0px, 0px);
   }
   100% {
-    transform: translate3d(40px, 40px, 0px);
-  }
-}
-@keyframes bounce-2 {
-  0% {
-    transform: translate3d(50px, 30px, 0px);
-  }
-  50% {
-    transform: translate3d(40px, 40px, 40px) skewY(0deg);
-  }
-  100% {
-    transform: translate3d(50px, 30px, 0px);
+    transform: translate3d(0px, 20px, 40px);
   }
 }
 @keyframes bounce-3 {
   0% {
-    transform: translate3d(40px, 10px, 20px);
+    transform: translate3d(0px, 30px, 0px);
   }
   50% {
-    transform: translate3d(20px, 40px, 10px) skewY(0deg);
+    transform: translate3d(0px, 40px, 40px);
   }
   100% {
-    transform: translate3d(40px, 10px, 20px);
+    transform: translate3d(0px, 30px, 0px);
+  }
+}
+@keyframes bounce-2 {
+  0% {
+    transform: translate3d(40px, 10px, 0px);
+  }
+  50% {
+    transform: translate3d(20px, 40px, 0px);
+  }
+  100% {
+    transform: translate3d(40px, 10px, 0px);
   }
 }
 
@@ -203,7 +230,7 @@ a {
   left: 40px;
   top: 270px;
   width: 33%;
-  animation: bounce-3 4s ease-in infinite;
+  animation: bounce-1 4s ease-in infinite;
 }
 .grid img:nth-child(2) {
   position: absolute;
@@ -215,13 +242,13 @@ a {
 .grid img:nth-child(3) {
   position: absolute;
   right: 40px;
-  top: 100px;
-  width: 27%;
-  animation: bounce-3 2s ease-in infinite;
+  top: 300px;
+  width: 25%;
+  animation: bounce-3 4s ease-in infinite;
 }
 .grid img:nth-child(4) {
   position: absolute;
-  left: 50%;
+  left: 45%;
   top: 530px;
   animation: bounce-1 2s ease-in infinite;
 }
@@ -231,28 +258,29 @@ a {
     padding: 500px 20px 0;
   }
   .grid img:nth-child(1) {
-    left: 20px;
+    /* left: -20px; */
     top: 50px;
     width: 33%;
   }
   .grid img:nth-child(2) {
     position: absolute;
-    left: 50%;
+    left: 40%;
     transform: translateX(-50%);
     top: 20px;
-    width: 27%;
+    width: 30%;
   }
   .grid img:nth-child(3) {
     position: absolute;
-    right: 40px;
-    top: 100px;
-    width: 27%;
+    /* left: -20px; */
+    top: 27px;
+    width: 20%;
   }
   .grid img:nth-child(4) {
     position: absolute;
-    left: 20px;
-    top: 230px;
-    width: 50%;
+
+    right: 20px;
+    top: 200px;
+    width: 33%;
   }
 }
 .mother {
@@ -261,9 +289,15 @@ a {
   color: white;
   max-width: 710px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 94px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-@media screen and (max-width: 1440px) {
+.mother svg {
+  margin-top: 33px;
+}
+@media screen and (max-width: 1200px) {
   .mother {
     font-size: 28px;
     line-height: 48px;
@@ -284,44 +318,62 @@ a {
 .grid-two {
   position: relative;
   padding: 500px 0;
+  display: flex;
+  padding: 0 100px;
+  justify-content: space-around;
+  overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .grid-two {
+    padding: 0 20px;
+  }
 }
 .grid-two img:nth-child(1) {
-  position: absolute;
+  /* position: absolute;
   right: 70px;
-  top: -250px;
-  width: 18%;
+  top: -250px; */
+  width: 80%;
   animation: bounce-1 2s ease-in infinite;
 }
-.grid-two img:nth-child(2) {
-  position: absolute;
+.grid-flex img:nth-child(2) {
+  /* position: absolute;
   left: 40px;
-  top: 250px;
-  width: 33%;
+  top: 250px; */
+  width: 95%;
   animation: bounce-3 2s ease-in infinite;
 }
+.grid-mid {
+  /* position: absolute;
+  left: 40px;
+  top: 250px; */
+  min-width: 24%;
+  height: fit-content;
+  animation: bounce-3 2s ease-in infinite;
+}
+
 .grid-two img:nth-child(3) {
-  position: absolute;
+  /* position: absolute;
   left: 45%;
-  top: 146px;
-  width: 23%;
+  top: 146px; */
+  width: 24%;
   animation: bounce-1 2s ease-in infinite;
 }
 .grid-two img:nth-child(4) {
-  position: absolute;
+  /* position: absolute;
   right: 40px;
-  /* transform: translateX(-50%); */
-  top: 200px;
+  transform: translateX(-50%);
+  top: 200px; */
   width: 22.5%;
   animation: bounce-2 2s ease-in infinite;
 }
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   .grid-two img:nth-child(1) {
     right: 70px;
     top: -30px;
     width: 18%;
   }
-}
-@media screen and (max-width: 900px) {
+} */
+/* @media screen and (max-width: 900px) {
   .grid-two {
     position: relative;
     padding: 175px 0;
@@ -348,7 +400,7 @@ a {
   .grid-two img:nth-child(4) {
     top: 100px;
   }
-}
+} */
 
 .testimony {
   padding-bottom: 300px;
@@ -381,13 +433,23 @@ a {
   margin-top: 56px;
   border-radius: 20px;
   font-size: 28px;
-  font-weight: 700;
+  /* font-weight: 700; */
   justify-content: center;
   align-items: center;
   color: black;
   text-decoration: none;
 }
+@media screen and (max-width: 900px) {
+  .testimony p {
+    font-size: 28px;
+    line-height: 48px;
+    padding: 20px;
+  }
+}
 @media screen and (max-width: 600px) {
+  .testimony {
+    padding-bottom: 100px;
+  }
   .testimony h3 {
     font-size: 34px;
     line-height: 48px;
@@ -397,10 +459,38 @@ a {
     line-height: 27px;
     padding: 0 28px;
   }
+
   .testimony a {
     width: 80%;
     font-size: 15px;
     line-height: 18px;
     height: 50px;
   }
+}
+
+.grid-flex {
+  display: flex;
+  flex-direction: column;
+  min-width: 30%;
+  max-width: 33%;
+  align-items: center;
+}
+.grid-flex:first-child {
+  margin-top: 60px;
+}
+.grid-flex:first-child img {
+  margin-bottom: 34px;
+}
+.grid-flex:last-child img {
+  margin-bottom: 74px;
+}
+.footer {
+  font-size: 26px;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  border-top: 1px dashed #7a7a7a;
+}
+.footer a {
+  color: white;
 }

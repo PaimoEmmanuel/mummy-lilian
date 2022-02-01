@@ -25,16 +25,37 @@
     rgba(9, 9, 9, 0) 118.85%
   );
   background-color: #000;
+  flex-grow: 1;
 }
 .dp-heading img {
   min-width: 42%;
+  max-width: 42%;
   min-height: 100%;
   object-fit: cover;
 }
-@media screen and (max-width: 1440px) {
-  .dp-heading img {
-    font-size: 40px;
-    line-height: 50px;
+@media screen and (max-width: 1700px) {
+  .dp-heading h1 {
+    font-size: 120px;
+    line-height: 142px;
+    /* max-width: 620px; */
+  }
+}
+@media screen and (max-width: 1200px) {
+  .dp-heading h1 {
+    font-size: 80px;
+    line-height: 102px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .dp-heading h1 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dp-heading h1 {
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 .dp-gen {
@@ -56,8 +77,21 @@
   top: 0;
   right: 0;
 }
+@media screen and (max-width: 1200px) {
+  .dp-gen img {
+    width: 20%;
+  }
+}
 .dp-gen img:first-child {
   left: 0;
+}
+.dp-gen h3 {
+  font-size: 72px;
+  line-height: 84px;
+  max-width: 789px;
+  text-align: center;
+  margin-top: 120px;
+  z-index: 9;
 }
 .dp-gen p {
   font-size: 24px;
@@ -65,15 +99,50 @@
   font-weight: 700;
   max-width: 521px;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 60px;
+  z-index: 9;
 }
-.picture-frame {
-  width: 949px;
-  height: 714px;
+@media screen and (max-width: 900px) {
+  .dp-gen h3 {
+    font-size: 52px;
+    line-height: 64px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dp-gen h3 {
+    font-size: 28px;
+    line-height: 34px;
+    padding: 0 20px;
+  }
+  .dp-gen p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.text-frame {
+  width: 776px;
+  height: 586px;
   background: #ffffff;
   border: 1px solid #dadada;
   border-radius: 8px;
   margin: 40px 0 128px;
+  padding: 20px;
+  font-size: 16px;
+  z-index: 9;
+}
+@media screen and (max-width: 1200px) {
+  .text-frame {
+    width: 576px;
+    height: 486px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .text-frame {
+    width: 90%;
+    height: 300px;
+    margin: 40px 0 68px;
+  }
 }
 .dp-gen input {
   width: 448px;
@@ -81,6 +150,7 @@
   border: 1px solid #dadada;
   border-radius: 8px;
   padding: 0 20px;
+  z-index: 9;
 }
 .dp-gen button {
   background-color: #ffed8f;
@@ -98,9 +168,21 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
+  z-index: 9;
 }
 .dp-gen button:disabled {
   background-color: #fff8d0;
   color: #dedab4;
 }
-
+@media screen and (max-width: 600px) {
+  .dp-gen input {
+    width: 90%;
+  }
+  .dp-gen button {
+    width: 90%;
+    font-size: 15px;
+    line-height: 18px;
+    height: 50px;
+    margin-top: 20px;
+  }
+}
