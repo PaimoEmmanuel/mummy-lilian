@@ -9,7 +9,7 @@ gsap
   .from(headerBg, {
     duration: 2,
     ease: "power2",
-    scale: 1.05,
+    scale: 1.08,
   })
   //     // .from(spans[0], {
   //     //     duration: .4,
@@ -78,6 +78,7 @@ gsap
   //         skewY: 9
   //     })
   .from(headeingText, {
+    delay: 2,
     duration: 1,
     opacity: 0,
     y: 50,
@@ -106,7 +107,7 @@ gsap.from(".testimony a", {
 
 setTimeout(() => {
   document.querySelector(".header h1").style.visibility = "visible";
-}, 2000);
+}, 2100);
 setTimeout(() => {
   spans.forEach((span, index) => {
     gsap.from(span, {

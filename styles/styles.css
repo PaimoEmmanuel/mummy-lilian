@@ -20,7 +20,7 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
+/* @font-face {
   font-family: GalanoGrotesque;
   src: url("../assets/fonts/GalanoGrotesque-Medium.woff") format("woff");
   font-weight: 700;
@@ -30,6 +30,21 @@
 @font-face {
   font-family: GalanoGrotesque;
   src: url("../assets/fonts/GalanoGrotesque-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: AcidGrotesk;
+  src: url("../assets/fonts/AcidGrotesk-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: AcidGrotesk;
+  src: url("../assets/fonts/AcidGrotesk-Normal.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -46,7 +61,7 @@ h6 {
 p,
 textarea,
 a {
-  font-family: GalanoGrotesque;
+  font-family: AcidGrotesk;
 }
 
 .header {
