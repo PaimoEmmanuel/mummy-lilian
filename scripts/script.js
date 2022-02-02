@@ -104,6 +104,12 @@ gsap.from(".testimony a", {
   duration: 1,
   y: 150,
 });
+gsap.to(".mother span", {
+  scrollTrigger: document.querySelector(".mother span"),
+  duration: 1,
+  w: 0,
+});
+// .svg-cover
 
 setTimeout(() => {
   document.querySelector(".header h1").style.visibility = "visible";

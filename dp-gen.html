@@ -23,13 +23,12 @@
             <h3>Share an experience, testimony,
                 manner of life or message snippet
                 of how mummy has blessed you</h3>
-            <p>Write your name in the box below <br>
-                (limit: 15 characters)</p>
-            <input type="text" placeholder="Max. limit is 25 characters">
+            <p>Tell us your name</p>
+            <input id="name" type="text" maxlength="25" placeholder="Max. limit is 25 characters">
             <p>Share your experience here</p>
-            <textarea name="text-frame" class="text-frame" placeholder="Max. limit is 400 characters" id="text-frame"
+            <textarea item id="experience" name="text-frame" class="text-frame" maxlength="555" placeholder="Max. limit is 555 characters" id="text-frame"
                 cols="30" rows="10"></textarea>
-            <button href="dp-gen.html">Download DP</button>
+            <button id="dp-gen-btn" disabled href="dp-gen.html">Download DP</button>
         </div>
         <div class="success">
             <img src="assets/images/mummy-testimony.png" alt="">
@@ -44,4 +43,5 @@
     <p class="footer dp-gen-footer">Built by <a href="https://nlwc.church/">The New & Living Way Church</a> Publicity
         Team
     </p>
+    <script src="scripts/dp-gen.js"></script>
 </body>

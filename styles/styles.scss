@@ -1,17 +1,9 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 *,
 *::after,
 *::before {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
   overflow-x: hidden;
@@ -80,20 +72,11 @@ input {
   position: relative;
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
 }
 .header::after {
   content: "";
@@ -101,12 +84,8 @@ input {
   height: 100%;
   width: 100%;
   top: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#010101), color-stop(50%, rgba(83, 79, 79, 0)));
-  background: -o-linear-gradient(top, #010101 0%, rgba(83, 79, 79, 0) 50%);
   background: linear-gradient(180deg, #010101 0%, rgba(83, 79, 79, 0) 50%);
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 .header-bg {
   position: absolute;
@@ -114,27 +93,14 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+  object-fit: cover;
 }
 @keyframes rotate {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 .header-cel {
@@ -144,8 +110,7 @@ input {
   right: 80px;
   bottom: 180px;
   z-index: 9;
-  -webkit-animation: rotate 8s ease-in infinite;
-          animation: rotate 8s ease-in infinite;
+  animation: rotate 8s ease-in infinite;
 }
 @media screen and (max-width: 600px) {
   .header-cel {
@@ -168,8 +133,6 @@ input {
 .header h1 span {
   /* opacity: 1; */
   display: inline-block;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 .header h1 span:first-child {
@@ -244,126 +207,64 @@ input {
   background-color: #010101;
 }
 
-@-webkit-keyframes bounce-1 {
-  0% {
-    -webkit-transform: translate3d(0px, 20px, 40px);
-            transform: translate3d(0px, 20px, 40px);
-  }
-  50% {
-    -webkit-transform: translate3d(00px, 0px, 0px);
-            transform: translate3d(00px, 0px, 0px);
-  }
-  100% {
-    -webkit-transform: translate3d(0px, 20px, 40px);
-            transform: translate3d(0px, 20px, 40px);
-  }
-}
-
 @keyframes bounce-1 {
   0% {
-    -webkit-transform: translate3d(0px, 20px, 40px);
-            transform: translate3d(0px, 20px, 40px);
+    transform: translate3d(0px, 20px, 40px);
   }
   50% {
-    -webkit-transform: translate3d(00px, 0px, 0px);
-            transform: translate3d(00px, 0px, 0px);
+    transform: translate3d(00px, 0px, 0px);
   }
   100% {
-    -webkit-transform: translate3d(0px, 20px, 40px);
-            transform: translate3d(0px, 20px, 40px);
-  }
-}
-@-webkit-keyframes bounce-3 {
-  0% {
-    -webkit-transform: translate3d(0px, 30px, 0px);
-            transform: translate3d(0px, 30px, 0px);
-  }
-  50% {
-    -webkit-transform: translate3d(0px, 40px, 40px);
-            transform: translate3d(0px, 40px, 40px);
-  }
-  100% {
-    -webkit-transform: translate3d(0px, 30px, 0px);
-            transform: translate3d(0px, 30px, 0px);
+    transform: translate3d(0px, 20px, 40px);
   }
 }
 @keyframes bounce-3 {
   0% {
-    -webkit-transform: translate3d(0px, 30px, 0px);
-            transform: translate3d(0px, 30px, 0px);
+    transform: translate3d(0px, 30px, 0px);
   }
   50% {
-    -webkit-transform: translate3d(0px, 40px, 40px);
-            transform: translate3d(0px, 40px, 40px);
+    transform: translate3d(0px, 40px, 40px);
   }
   100% {
-    -webkit-transform: translate3d(0px, 30px, 0px);
-            transform: translate3d(0px, 30px, 0px);
-  }
-}
-@-webkit-keyframes bounce-2 {
-  0% {
-    -webkit-transform: translate3d(40px, 10px, 0px);
-            transform: translate3d(40px, 10px, 0px);
-  }
-  50% {
-    -webkit-transform: translate3d(20px, 40px, 0px);
-            transform: translate3d(20px, 40px, 0px);
-  }
-  100% {
-    -webkit-transform: translate3d(40px, 10px, 0px);
-            transform: translate3d(40px, 10px, 0px);
+    transform: translate3d(0px, 30px, 0px);
   }
 }
 @keyframes bounce-2 {
   0% {
-    -webkit-transform: translate3d(40px, 10px, 0px);
-            transform: translate3d(40px, 10px, 0px);
+    transform: translate3d(40px, 10px, 0px);
   }
   50% {
-    -webkit-transform: translate3d(20px, 40px, 0px);
-            transform: translate3d(20px, 40px, 0px);
+    transform: translate3d(20px, 40px, 0px);
   }
   100% {
-    -webkit-transform: translate3d(40px, 10px, 0px);
-            transform: translate3d(40px, 10px, 0px);
+    transform: translate3d(40px, 10px, 0px);
   }
 }
 .grid {
   position: relative;
   padding: 80px 96px 130px;
   overflow-x: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .grid-1 {
   min-width: 33%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   margin-right: 68px;
   margin-top: 190px;
-  -webkit-animation: bounce-1 2s ease-in infinite;
-          animation: bounce-1 2s ease-in infinite;
+  animation: bounce-1 2s ease-in infinite;
 }
 .grid-2 {
-  -webkit-animation: bounce-3 2s ease-in infinite;
-          animation: bounce-3 2s ease-in infinite;
+  animation: bounce-3 2s ease-in infinite;
 }
 .grid-3 {
   margin: 68px 45px 0 68px;
-  -webkit-animation: bounce-3 2s ease-in infinite;
-          animation: bounce-3 2s ease-in infinite;
+  animation: bounce-3 2s ease-in infinite;
 }
 .grid-4 {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   margin-top: 190px;
   min-width: 27%;
-  -webkit-animation: bounce-1 2s ease-in infinite;
-          animation: bounce-1 2s ease-in infinite;
+  animation: bounce-1 2s ease-in infinite;
 }
 
 @media screen and (max-width: 1200px) {
@@ -379,9 +280,7 @@ input {
     padding: 80px 36px 130px;
     /* padding-top: 0;
     padding-bottom: 0; */
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .grid-2 {
     width: 90%;
@@ -394,8 +293,7 @@ input {
 @media screen and (max-width: 900px) {
   .grid-4 {
     min-height: 144px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 @media screen and (max-width: 600px) {
@@ -423,16 +321,9 @@ input {
   max-width: 710px;
   text-align: center;
   margin: 0 auto 94px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 .mother svg {
@@ -465,12 +356,9 @@ input {
 .grid-two {
   position: relative;
   padding: 500px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0 100px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   overflow: hidden;
 }
 @media screen and (max-width: 600px) {
@@ -480,27 +368,21 @@ input {
 }
 .grid-two img:nth-child(1) {
   width: 80%;
-  -webkit-animation: bounce-1 2s ease-in infinite;
-          animation: bounce-1 2s ease-in infinite;
+  animation: bounce-1 2s ease-in infinite;
 }
 .grid-flex img:nth-child(2) {
   width: 95%;
-  -webkit-animation: bounce-3 2s ease-in infinite;
-          animation: bounce-3 2s ease-in infinite;
+  animation: bounce-3 2s ease-in infinite;
 }
 .grid-mid {
   min-width: 24%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
-  -webkit-animation: bounce-3 2s ease-in infinite;
-          animation: bounce-3 2s ease-in infinite;
+  animation: bounce-3 2s ease-in infinite;
 }
 
 .grid-two img:nth-child(3) {
   width: 24%;
-  -webkit-animation: bounce-1 2s ease-in infinite;
-          animation: bounce-1 2s ease-in infinite;
+  animation: bounce-1 2s ease-in infinite;
 }
 .grid-two img:nth-child(4) {
   /* position: absolute;
@@ -508,8 +390,7 @@ input {
   transform: translateX(-50%);
   top: 200px; */
   width: 22.5%;
-  -webkit-animation: bounce-2 2s ease-in infinite;
-          animation: bounce-2 2s ease-in infinite;
+  animation: bounce-2 2s ease-in infinite;
 }
 
 .testimony {
@@ -538,20 +419,14 @@ input {
   background-color: #ffed8f;
   width: 441px;
   height: 97px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   margin-top: 56px;
   border-radius: 20px;
   font-size: 28px;
   /* font-weight: 700; */
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: black;
   text-decoration: none;
 }
@@ -588,18 +463,11 @@ input {
 }
 
 .grid-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-width: 30%;
   max-width: 33%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .grid-flex:first-child {
   margin-top: 60px;
