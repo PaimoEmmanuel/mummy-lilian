@@ -107,7 +107,7 @@ gsap.from(".testimony a", {
 gsap.to(".mother span", {
   scrollTrigger: document.querySelector(".mother span"),
   duration: 1,
-  w: 0,
+  width: 0,
 });
 // .svg-cover
 
