@@ -24,8 +24,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: -o-linear-gradient(
     3.38deg,
     #2f060f 58.48%,
@@ -38,15 +38,15 @@
   );
   background-color: #000;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 .dp-heading-img {
   min-width: 42%;
   max-width: 42%;
   min-height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @-webkit-keyframes rotate {
   0% {
@@ -76,10 +76,10 @@
   left: 40%;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   -webkit-animation: rotate 8s ease-in infinite;
-          animation: rotate 8s ease-in infinite;
+  animation: rotate 8s ease-in infinite;
 }
 @media screen and (max-width: 1700px) {
   .dp-heading h1 {
@@ -126,15 +126,16 @@
   display: flex;
   /* justify-content: center; */
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background: -webkit-gradient(
     linear,
-    left top, left bottom,
+    left top,
+    left bottom,
     color-stop(14.13%, #ffe7e7),
     to(rgba(248, 239, 222, 0))
   );
@@ -193,11 +194,13 @@
     line-height: 34px;
     padding: 0 20px;
     margin-top: 40px;
+    max-width: 289px;
+    padding: 0;
   }
   .dp-gen p {
+    margin-top: 56px;
     font-size: 18px;
     line-height: 28px;
-    font-weight: 400;
   }
 }
 
@@ -222,7 +225,8 @@
   .text-frame {
     width: 90%;
     height: 586px;
-    margin: 10px 0 68px;
+    margin: 20px 0 68px;
+    font-size: 15px;
   }
 }
 .dp-gen input {
@@ -246,11 +250,11 @@
   font-size: 28px;
   font-weight: 700;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: black;
   text-decoration: none;
   border: none;
@@ -265,6 +269,8 @@
   .dp-gen input {
     width: 90%;
     height: 50px;
+    margin-top: 20px;
+    font-size: 15px;
   }
   .dp-gen button {
     width: 90%;
@@ -287,11 +293,16 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+  }
 }
 .success {
   display: -webkit-box;
@@ -299,16 +310,16 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 0 20px;
-  display: none;
+  /* display: none; */
 }
 .success img {
   position: relative;
@@ -317,7 +328,8 @@
   border-radius: 50%;
   margin: 60px 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+  border: 10px solid #FEE5E5;
 }
 .success h3 {
   font-size: 72px;
@@ -327,11 +339,17 @@
 }
 @media screen and (max-width: 600px) {
   .success img {
-    height: 300px;
-    width: 300px;
+    height: 205px;
+    width: 205px;
+    margin-bottom: 0;
   }
   .success h3 {
     font-size: 28px;
     line-height: 34px;
+    margin-top: 36px;
+  }
+  .success p {
+    font-weight: 400;
+    margin-top: 40px;
   }
 }
