@@ -126,3 +126,5 @@ setTimeout(() => {
     });
   });
 }, 2000);
+
+window.location = "https://paimoemmanuel.github.io/mummy-lilian/"+ '?q=' +  (new Date()).getTime()
