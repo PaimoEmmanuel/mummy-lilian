@@ -447,7 +447,7 @@ input {
     display: block;
     position: absolute;
     bottom: 80px;
-    right: 30px;
+    left: 220px;
     animation: bounce-3 2s ease-in infinite;
   }
 }
